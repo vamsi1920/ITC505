@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lights Out</h1>
+    </header>
+    <div class="container">
+    </div>
+    <div class="button-container">
+        <p>Current Level: <span id="currentLevel">Easy</span></p>
+        <p>Select a level:</p>
+        
+        <div class="level-buttons">
+            <button onclick="setLevel('easy')">Easy</button>
+            <button onclick="setLevel('hard')">Hard</button>
+        </div>
+        <button onclick="resetGame()">Reset</button>
+        <button id="addendumButton">Addendum</button>
+    </div>
+    
+    <div id="addendum" class="hidden">
+        <h2>Addendum: Lights Out Game</h2>
+        <p>This project was created to practice core web development skills. It involved building an interactive "Lights Out" puzzle game using HTML, CSS and JavaScript.</p>
+        
+        <p><strong>HTML:</strong></p>
+        <ul>
+            <li>Structured the page with semantic elements like <code>&lt;header&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;footer&gt;</code>.</li>
+            <li>Used <code>&lt;audio&gt;</code> tags for sound effects and <code>&lt;script&gt;</code> tags to include logic.</li>
+        </ul>
+    
+        <p><strong>CSS:</strong></p>
+        <ul>
+            <li>Designed a responsive grid layout for the lights using Flexbox.</li>
+            <li>Styled the buttons, header, and win message with animations (e.g., blinking heading).</li>
+            <li>Created hover effects, color changes, and visual feedback for game states.</li>
+        </ul>
+    
+        <p><strong>JavaScript:</strong></p>
+        <ul>
+            <li>Generated a 5x5 game grid dynamically using the DOM.</li>
+            <li>Handled click events to toggle lights and check for win conditions.</li>
+            <li>Implemented two difficulty levels: Easy (individual toggle) and Hard (plus neighbors).</li>
+            <li>Used audio feedback on interactions and controlled visibility of elements like the Addendum.</li>
+        </ul>
+    
+        <p><strong>Conclusion:</strong> This project helped strengthen my understanding of dynamic DOM manipulation, interactive design with CSS and logical control flow in JavaScript.</p>
+    </div>
+    
+    
+    
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    <audio id="onSound" src="on.wav"></audio>
+    <audio id="offSound" src="off.wav"></audio>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
